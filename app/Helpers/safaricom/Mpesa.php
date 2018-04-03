@@ -5,6 +5,7 @@ namespace App\Helpers\safaricom;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use anlutro\LaravelSettings\Facade as Settings;
+// use Illuminate\Support\Facades\Log;
 
 Class Mpesa
 {
@@ -34,11 +35,12 @@ Class Mpesa
       $client = new Client();
       $baseUrl = env('SAFARICOM_BASE_URL');
       $token = Settings::get('mpesa-api.token');
+      // Log::info($token);
 
       try {
         $response = $client->post($baseUrl.$endpoint, [
           'headers' => [
-              'Authorization' => 'Bearer'.$token,
+              'Authorization' => 'Bearer '.$token,
               'Content-Type' => 'application/json',
           ],
           'json' => $requestBody

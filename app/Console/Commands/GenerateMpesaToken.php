@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Carbon\Carbon;
 use App\Helpers\safaricom\Mpesa;
 use Illuminate\Console\Command;
 use anlutro\LaravelSettings\Facade as Settings;
@@ -43,7 +44,8 @@ class GenerateMpesaToken extends Command
 
 
         $data = [
-            'token' => $token['access_token']
+            'token' => $token['access_token'],
+            'time' => Carbon::now()->toDateTimeString()
         ];
 
         Settings::forget('mpesa-api');
