@@ -17,3 +17,7 @@
 
 - Run php artisan Mpesa:generateToken to create a token
 - open postman and test endpoints
+
+## Point to Note
+- register to developer.safaricom.co.ke
+- create consumer key and secret to populate .env with credentials
