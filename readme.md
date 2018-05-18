@@ -23,12 +23,12 @@
 - create consumer key and secret to populate .env with credentials
 
 ## env structure
-SAFARICOM_BASE_URL={https://sandbox.safaricom.co.ke/ - testing, production urls provided by safaricom on going live}
-SAFARICOM_KEY={your key}
-SAFARICOM_SECRET={your secret}
-SAFARICOM_PAYBILL={your paybill no}
-SAFARICOM_CALLBACK_URL={your callback url - MUST BE HTTPS}
-SAFARICOM_CONFIRMATION_URL={your confirmation url - MUST BE HTTPS}
-SAFARICOM_VALIDATION_URL={your validation url - MUST BE HTTPS}
+- SAFARICOM_BASE_URL={https://sandbox.safaricom.co.ke/ - testing, production urls provided by safaricom on going live}
+- SAFARICOM_KEY={your key}
+- SAFARICOM_SECRET={your secret}
+- SAFARICOM_PAYBILL={your paybill no}
+- SAFARICOM_CALLBACK_URL={your callback url - MUST BE HTTPS}
+- SAFARICOM_CONFIRMATION_URL={your confirmation url - MUST BE HTTPS}
+- SAFARICOM_VALIDATION_URL={your validation url - MUST BE HTTPS}
 
 set up ssl for domain urls
