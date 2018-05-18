@@ -77,7 +77,9 @@ class MpesaTransactionsController extends Controller
       $lastName = $transaction["LastName"];
 
 
-      $userTransaction->create([
+//        $userTransaction = UserTransaction::all();
+
+      UserTransaction::create([
             'first_name' => $firstName,
             'middle_name' => $middleName,
             'last_name' => $lastName,
