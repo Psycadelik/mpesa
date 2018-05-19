@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::post('/registerurl', 'MpesaTransactionsController@Register');
 Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
+Route::post('receive', 'MpesaTransactionsController@SimulateTransactionResponse');
