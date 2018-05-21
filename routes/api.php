@@ -13,13 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::get('/validate','MpesaTransactionsController@c2bValidate');
+//Route::post('/response', 'MpesaTransactionsController@SimulateTransactionResponse');
 
-// Route::prefix('/api/v1')->group(function () {
-//
-//   Route::post('/registerurl', 'MpesaTransactionsController@Register');
-//   Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
-//
-// });

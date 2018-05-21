@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::post('/registerurl', 'MpesaTransactionsController@Register');
 Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
-Route::post('receive', 'MpesaTransactionsController@SimulateTransactionResponse');
+Route::post('/validate','MpesaTransactionsController@c2bValidate');
+Route::post('/response', 'MpesaTransactionsController@SimulateTransactionResponse');

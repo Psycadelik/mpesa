@@ -56,11 +56,24 @@ class MpesaTransactionsController extends Controller
         return response()->json($response);
     }
 
+    public function c2bValidate()
+    {
+         $resultArray = [
+             'ResultCode' => '0',
+             'ResultMsg' => 'Service Processing successful' 
+         ];
+        header('Content-Type: application\json');
+        return response()->json($resultArray);
+          
+
+    }
+
     public function SimulateTransactionResponse(Request $request)
     {
       $request->headers->set('content-type', 'application/json');
 
       $transaction = $request->all();
+//        print_r($transaction);exit;
 
 
       $transId = $transaction["TransID"];
