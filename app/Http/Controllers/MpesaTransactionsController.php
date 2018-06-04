@@ -53,7 +53,7 @@ class MpesaTransactionsController extends Controller
 
         $response = Mpesa::post('mpesa/c2b/v1/simulate', $requestBody);
 
-        return response()->json_encode($response);
+        return response()->json($response);
     }
 
     public function c2bValidate()
