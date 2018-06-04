@@ -20,6 +20,6 @@ Route::get('/', function () {
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/registerurl', 'MpesaTransactionsController@Register');
-Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
-Route::post('/validate','MpesaTransactionsController@c2bValidate');
-Route::post('/response', 'MpesaTransactionsController@SimulateTransactionResponse');
+Route::any('/simulate', 'MpesaTransactionsController@SimulateTransaction');
+Route::any('/validate','MpesaTransactionsController@c2bValidate');
+Route::any('/response', 'MpesaTransactionsController@SimulateTransactionResponse');
