@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\safaricom\Mpesa;
 use App\TransactionLog;
+use App\Log;
 use App\UserTransaction;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
@@ -72,7 +73,11 @@ class MpesaTransactionsController extends Controller
     {
       $request->headers->set('content-type', 'application/json');
 
-      $transaction = $request->all();
+      $transaction = $request->getContent();
+        Log::create(['description' => 'IPN', 'content' => $transaction]);
+        exit;
+
+
 //        print_r($transaction);exit;
 
 
