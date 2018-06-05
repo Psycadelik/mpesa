@@ -77,10 +77,10 @@ class MpesaTransactionsController extends Controller
         Log::create(['description' => 'IPN', 'content' => $transaction]);
 //        exit;
 
-        print_r($transaction);exit;
+//        print_r($transaction);exit;
         $transaction_strip = json_decode($transaction, true);
         
-//        print_r($transaction_strip);exit;
+        print_r($transaction_strip);exit;
 
       $transId = $transaction_strip["TransID"];
       $transTime = $transaction_strip["TransTime"];
