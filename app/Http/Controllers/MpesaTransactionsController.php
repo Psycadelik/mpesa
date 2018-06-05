@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\safaricom\Mpesa;
 use App\TransactionLog;
+use Yajra\Datatables\Datatables;
 use App\Log;
 use App\UserTransaction;
 use Carbon\Carbon;
@@ -118,16 +119,16 @@ class MpesaTransactionsController extends Controller
 
     }
     
-//    public function decDb()
-//    {
-//
-//        $log = Log::get();
-//        
-//        $transaction = json_decode($log);
-//        
-//        return response()->json($transaction);
-//        
-//        
-//    }
+    public function viewData()
+    {
+        $data = UserTransaction::get();
+        
+        return view('admin', compact('data'));
+    }
+
+    public function anyData()
+    {
+        return Datatables::of(UserTransaction::query())->make(true);
+    }
 
 }

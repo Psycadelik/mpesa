@@ -15,12 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::post('/registerurl', 'MpesaTransactionsController@Register');
 Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
 Route::any('/validate','MpesaTransactionsController@c2bValidate');
 Route::any('/response', 'MpesaTransactionsController@SimulateTransactionResponse');
-Route::get('/trans', 'MpesaTransactionsController@decDb');
+Route::get('/data', 'MpesaTransactionsController@viewData')->middleware('auth');
+Route::get('anydata', 'MpesaTransactionsController@anyData')->name('anydata');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
