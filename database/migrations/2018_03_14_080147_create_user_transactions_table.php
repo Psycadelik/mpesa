@@ -18,7 +18,7 @@ class CreateUserTransactionsTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('middle_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->integer('account_number')->nullable(); //BillRefNumber
+            $table->string('account_number')->nullable(); //BillRefNumber
             $table->integer('amount')->nullable(); //TransAmount
             $table->string('business_short_code')->nullable();//BizShortCode
             $table->string('invoice_no')->nullable();
