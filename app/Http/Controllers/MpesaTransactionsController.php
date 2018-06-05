@@ -76,23 +76,24 @@ class MpesaTransactionsController extends Controller
       $transaction = $request->getContent();
         Log::create(['description' => 'IPN', 'content' => $transaction]);
 //        exit;
-
-
+        
 //        print_r($transaction);exit;
+        $transaction_strip = json_decode($transaction);
+        
+//        print_r($transaction_strip);exit;
 
-
-      $transId = $transaction["TransID"];
-      $transTime = $transaction["TransTime"];
-      $transAmount = $transaction["TransAmount"];
-      $businessShortCode = $transaction["BusinessShortCode"];
-      $billRefNumber = $transaction["BillRefNumber"];
-      $invoiceNumber = $transaction["InvoiceNumber"];
-      $accountBalance = $transaction["OrgAccountBalance"];
-      $thirdPartyTrans = $transaction["ThirdPartyTransID"];
-      $msisdn = $transaction["MSISDN"];
-      $firstName = $transaction["FirstName"];
-      $middleName = $transaction["MiddleName"];
-      $lastName = $transaction["LastName"];
+      $transId = $transaction_strip["TransID"];
+      $transTime = $transaction_strip["TransTime"];
+      $transAmount = $transaction_strip["TransAmount"];
+      $businessShortCode = $transaction_strip["BusinessShortCode"];
+      $billRefNumber = $transaction_strip["BillRefNumber"];
+      $invoiceNumber = $transaction_strip["InvoiceNumber"];
+      $accountBalance = $transaction_strip["OrgAccountBalance"];
+      $thirdPartyTrans = $transaction_strip["ThirdPartyTransID"];
+      $msisdn = $transaction_strip["MSISDN"];
+      $firstName = $transaction_strip["FirstName"];
+      $middleName = $transaction_strip["MiddleName"];
+      $lastName = $transaction_strip["LastName"];
 
 
 //        $userTransaction = UserTransaction::all();
