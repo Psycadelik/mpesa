@@ -8,5 +8,6 @@ class UserTransaction extends Model
 {
     protected $table = 'user_transactions';
 
-    protected $fillable = ['user_id', 'amount', 'transaction_ref', 'transaction_time'];
+    protected $fillable = ['first_name', 'middle_name', 'last_name', 'account_number', 'amount','business_short_code',
+                            'invoice_no','account_balance','third_party_id','msisdn','transaction_id','transaction_time'];
 }
