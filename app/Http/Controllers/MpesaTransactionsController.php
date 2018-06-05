@@ -80,7 +80,7 @@ class MpesaTransactionsController extends Controller
 //        print_r($transaction);exit;
         $transaction_strip = json_decode($transaction);
         
-//        print_r($transaction_strip);exit;
+        print_r($transaction_strip);exit;
 
       $transId = $transaction_strip["TransID"];
       $transTime = $transaction_strip["TransTime"];
