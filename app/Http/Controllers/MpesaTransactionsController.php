@@ -78,9 +78,9 @@ class MpesaTransactionsController extends Controller
 //        exit;
         
 //        print_r($transaction);exit;
-        $transaction_strip = json_decode($transaction);
+        $transaction_strip = json_decode($transaction, true);
         
-        print_r($transaction_strip);exit;
+//        print_r($transaction_strip);exit;
 
       $transId = $transaction_strip["TransID"];
       $transTime = $transaction_strip["TransTime"];
@@ -117,15 +117,16 @@ class MpesaTransactionsController extends Controller
 
     }
     
-    public function decDb()
-    {
-        $log = Log::get();
-        
-        $transaction = json_decode($log);
-        
-        return response()->json($transaction);
-        
-        
-    }
+//    public function decDb()
+//    {
+//
+//        $log = Log::get();
+//        
+//        $transaction = json_decode($log);
+//        
+//        return response()->json($transaction);
+//        
+//        
+//    }
 
 }
