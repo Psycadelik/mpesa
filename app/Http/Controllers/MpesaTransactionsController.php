@@ -71,7 +71,7 @@ class MpesaTransactionsController extends Controller
 
     public function SimulateTransactionResponse(Request $request)
     {
-      $request->headers->set('content-type', 'application/json');
+//      $request->headers->set('content-type', 'application/json');
 
       $transaction = $request->getContent();
         Log::create(['description' => 'IPN', 'content' => $transaction]);
@@ -79,8 +79,9 @@ class MpesaTransactionsController extends Controller
 
 //        print_r($transaction);exit;
         $transaction_strip = json_decode($transaction, true);
+
         
-        print_r($transaction_strip);exit;
+//        print_r($transaction_strip);exit;
 
       $transId = $transaction_strip["TransID"];
       $transTime = $transaction_strip["TransTime"];
