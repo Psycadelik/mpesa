@@ -75,7 +75,7 @@ class MpesaTransactionsController extends Controller
 
       $transaction = $request->getContent();
         Log::create(['description' => 'IPN', 'content' => $transaction]);
-        exit;
+//        exit;
 
 
 //        print_r($transaction);exit;
