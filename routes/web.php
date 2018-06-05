@@ -23,3 +23,4 @@ Route::post('/registerurl', 'MpesaTransactionsController@Register');
 Route::post('/simulate', 'MpesaTransactionsController@SimulateTransaction');
 Route::any('/validate','MpesaTransactionsController@c2bValidate');
 Route::any('/response', 'MpesaTransactionsController@SimulateTransactionResponse');
+Route::get('/trans', 'MpesaTransactionsController@decDb');

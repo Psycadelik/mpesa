@@ -116,5 +116,16 @@ class MpesaTransactionsController extends Controller
       return response()->json($request->all());
 
     }
+    
+    public function decDb()
+    {
+        $log = Log::get();
+        
+        $transaction = json_decode($log);
+        
+        return response()->json($transaction);
+        
+        
+    }
 
 }
