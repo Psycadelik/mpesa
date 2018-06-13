@@ -53,7 +53,7 @@ class MpesaTransactionsController extends Controller
           "BillRefNumber" => $request->get('phone')
         ];
 
-        $response = Mpesa::post('', $requestBody);
+        $response = Mpesa::post('mpesa/c2b/v1/simulate', $requestBody);
 
         return response()->json($response);
     }
