@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('mpesa:generateToken')
-                ->cron('55 * * * * *')->withoutOverlapping();
+                ->cron('55 * * * *')->withoutOverlapping();
     }
 
     /**
