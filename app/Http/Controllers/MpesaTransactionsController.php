@@ -75,6 +75,7 @@ class MpesaTransactionsController extends Controller
 //      $request->headers->set('content-type', 'application/json');
 
       $transaction = $request->getContent();
+        \Illuminate\Support\Facades\Log::info($transaction);
         Log::create(['description' => 'IPN', 'content' => $transaction]);
 //        exit;
 
