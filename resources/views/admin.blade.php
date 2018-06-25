@@ -11,7 +11,7 @@
                                 <th>Last Name</th>
                                 <th>Account Nummber</th>
                                 <th>Phone Number</th>
-                                <th>Amount</th>
+                                <th>Amount(Ksh)</th>
                                 <th>Transaction ID</th>
                                 <th>Transaction time</th>
                             </tr>
