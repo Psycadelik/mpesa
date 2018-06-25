@@ -9,6 +9,7 @@
                                 <th>First Name</th>
                                 <th>Middle Name</th>
                                 <th>Last Name</th>
+                                <th>Account Nummber</th>
                                 <th>Phone Number</th>
                                 <th>Amount</th>
                                 <th>Transaction ID</th>
@@ -33,6 +34,7 @@
                     { data: 'middle_name', name: 'middle_name' },
                     { data: 'last_name', name: 'last_name' },
                     { data: 'account_number', name: 'account_number' },
+                    { data: 'msisdn', name:'msisdn'},
                     { data: 'amount', name: 'amount' },
                     { data: 'transaction_id', name: 'transaction_id' },
                     { data: 'transaction_time', name: 'transaction_time' }
